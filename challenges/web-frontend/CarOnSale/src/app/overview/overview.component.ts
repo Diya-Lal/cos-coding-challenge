@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AutionService } from '../core/services/auction.service';
+import { AuthenticationService } from '../core/services/authentication.service';
 import { CommonService } from '../core/services/common.service';
 
 @Component({
@@ -11,7 +12,15 @@ export class OverviewComponent implements OnInit {
 
   auctions = [];
 
-  constructor(private auctionService: AutionService, private commonService: CommonService) { }
+  public get userId() {
+    if(this.authService.getUserId()){
+      return this.authService.getUserId()
+    } else {
+      return ''
+    }
+  }
+
+  constructor(private auctionService: AutionService, private commonService: CommonService, private authService: AuthenticationService) { }
 
   ngOnInit(): void {
     this.getAuctions();

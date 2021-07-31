@@ -1,0 +1,39 @@
+<div class="cos-auctions">
+    <div class="cos-auctions__user-title">
+        {{'Welcome'}} {{' '}}{{userId}}
+    </div>
+    
+    <div class="cos-auctions__body">
+        <mat-card class="cos-auctions__body__auctions-card" *ngFor="let auctionItem of auctions">
+            <mat-card-header>
+              <!-- <div mat-card-avatar class="example-header-image"></div> -->
+              <mat-card-title>{{auctionItem['label']}}</mat-card-title>
+              <mat-card-subtitle>{{'Make: '}}{{auctionItem['associatedVehicle']['make']}}{{'Model: '}}{{auctionItem['associatedVehicle']['model']}}</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src="{{auctionItem['associatedVehicle']['vehicleImages'[0]]['url']}}" alt="{{auctionItem['label']}}">
+            <mat-card-content>
+                <!-- <ul>
+                    <li>
+                        {{'First Registration: '}} {{auctionItem?.associatedVehicle?.EZ}}
+                    </li>
+                    <li>
+                        {{'Milage (KM) : '}} {{auctionItem?.associatedVehicle?.mileageInKm}}
+                    </li>
+                    <li>
+                        {{'Current Highest Bid Value: '}} {{auctionItem?.currentHighestBidValue}}
+                    </li>
+                    <li>
+                        {{'Remaining Time: '}} {{auctionItem?.remainingTimeInSeconds}}
+                    </li>
+                    <li>
+                        {{'Am I Highest Bidder: '}} {{auctionItem?.amIHighestBidder}}
+                    </li>
+                </ul> -->
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-button>Know More</button>
+            </mat-card-actions>
+          </mat-card>
+
+    </div>
+</div>
