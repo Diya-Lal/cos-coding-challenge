@@ -1,0 +1,17 @@
+<div class="cos-error-dialog">
+    <div class="cos-error-dialog__header">
+        <div class="cos-error-dialog__header__title">
+        <h2>{{title}}</h2>
+        </div>
+        <div class="cos-error-dialog__header__close-icon">
+            <mat-icon class="close" mat-dialog-close (click)="onClose()">close</mat-icon>
+        </div>
+    </div>
+    <hr class="horizontal-line">
+    <div class="cos-error-dialog__message">
+        <p>{{message}}</p>
+    </div>
+    <div class="cos-error-dialog__footer">
+        <button mat-flat-button class="cos-button-secondary" (click)="onClose()">Ok</button>
+    </div>
+</div>

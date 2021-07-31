@@ -1,0 +1,22 @@
+.cos-header {
+    background: #ffd452;
+    display: flex;
+
+    &__item {
+        flex:1;
+        &__login-button {
+            width: 13%;
+        }
+    }
+
+    &__logo {
+        padding-top: 6px;
+        padding-left: 11px;
+    }
+
+    &__action-login {
+        text-align: right;
+        margin-right: 25px;
+        margin-top: 13px;
+    }
+}

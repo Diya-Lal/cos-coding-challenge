@@ -1,0 +1,41 @@
+<div class="cos-login-form">
+    <div class="cos-login-form__title">
+        <h2 id="cos-login-form__title__label">Login</h2>
+    </div>
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin()" novalidate>
+        <div class="cos-login-form__form-field">
+        <mat-form-field class="cos-login-form__email" appearance="outline">
+            <mat-label>Email</mat-label>
+          <input matInput type="email" name="email" id="email" placeholder="Enter Email" formControlName="email">
+        </mat-form-field>
+        <div class="cos-error" *ngIf="!loginForm?.controls?.valid && (loginForm?.controls?.email?.dirty ||loginForm?.controls?.email?.touched)">
+          <div [hidden]="!loginForm?.controls?.email?.errors?.required">
+            Email is required
+          </div>
+          <div [hidden]="!loginForm?.controls?.email?.errors?.email">
+            Invalid email id
+          </div>
+        </div>
+      </div>
+
+        <div class="cos-login-form__form-field">
+          <mat-form-field class="cos-login-form__password" appearance="outline">
+              <mat-label>Password</mat-label>
+            <input matInput type="password" placeholder="Enter Password" formControlName="password">
+          </mat-form-field>
+
+          <div class="cos-error" *ngIf="!loginForm?.controls?.valid && (loginForm?.controls?.password?.dirty ||loginForm?.controls?.password?.touched)">
+            <div [hidden]="!loginForm?.controls?.password?.errors?.required">
+              Password is required
+            </div>
+          </div>
+
+        </div>
+
+        <div class="cos-login-form__submit-button">
+        <button mat-flat-button class="cos-button-secondary" [disabled]= "!loginForm.valid">Login</button>
+        </div>
+    </form>
+</div>
+
+

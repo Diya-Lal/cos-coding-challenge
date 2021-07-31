@@ -1,0 +1,16 @@
+.cos-login-form {
+    position: absolute;
+    left: 41%;
+    top: 30%;
+
+    &__title{
+        text-align: center;
+    }
+    &__form-field {
+        padding: 9px 0px;
+    }
+    &__submit-button {
+        text-align: center;
+    }
+}
+
