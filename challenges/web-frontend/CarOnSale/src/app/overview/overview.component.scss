@@ -4,6 +4,19 @@
     &__user-title{
         font-weight: bold;
         font-family: serif;
+        font-size: 30px;
+        color: #474b57;
+        text-decoration: underline;
+        text-decoration-color: #ffd452;
+    }
+    &__title {
+        font-weight: bold;
+        font-family: serif;
+        font-size: 30px;
+        color: #474b57;
+        padding: 30px 0px;
+        text-align: center;
+        text-decoration: underline;
     }
     &__body {
         display: flex;
@@ -13,7 +26,41 @@
         &__auctions-card{
             max-width: 400px;
             margin: 20px 20px;
+            &__details{
+                font-family: serif;
+                font-size: 16px;
+            }
+        }
+
+        &__auction-card-actions{
+            text-align: center;
+        }
+
+        &__container{
+            display: flex;
+            padding-bottom: 10px;
+        }
+        
+        &__item{
+            flex: 1;    
+        }
+        &__time{
+            padding: 20px 85px;
+            background: #78b2d6;
+            border-radius: 45px;
+            font-family: bold;
+        }
+        &__highest-bidder{
+            color: white;
+            border: 2px solid black;
+            // float: right;
+            background-image: radial-gradient(circle, #ffd452, black);
+            border-radius: 35%;
+            text-align: center;
+            padding: 4px;
+            position: absolute;
+            left: 68%;
         }
     }
-}
 
+}
