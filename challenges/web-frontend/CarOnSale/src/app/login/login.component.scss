@@ -10,6 +10,14 @@
     }
     &__form-field {
         padding: 1% 0%;
+        &__display-icon {
+            margin-top: -25px;
+            float: right;
+            .mat-icon {
+                cursor: pointer;
+            }
+        }
+
     }
     &__submit-button {
         text-align: center;

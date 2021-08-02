@@ -24,8 +24,12 @@
 
         <div class="cos-login-form__form-field">
           <mat-form-field class="cos-login-form__password" appearance="outline">
-              <mat-label>{{'password' | translate}}</mat-label>
-            <input aria-label="enter password" matInput type="password" placeholder="{{'passwordPlaceholder' | translate}}" formControlName="password">
+            <mat-label>{{'password' | translate}}</mat-label>
+            <input aria-label="enter password" matInput [type]="password" placeholder="{{'passwordPlaceholder' | translate}}" formControlName="password">
+            <span (click)="togglePasswordDisplay()" class="cos-login-form__form-field__display-icon">
+            <mat-icon  aria-hidden="true" *ngIf="!show">visibility</mat-icon>
+            <mat-icon aria-hidden="true" *ngIf="show">visibility_off</mat-icon>
+            </span>
           </mat-form-field>
 
          <div class="cos-error" *ngIf="!loginForm?.controls?.valid && (loginForm?.controls?.password?.dirty ||loginForm?.controls?.password?.touched)">
@@ -36,7 +40,7 @@
         </div>
 
         <div class="cos-login-form__form-field cos-login-form__submit-button">
-        <button aria-label="press to login" mat-flat-button class="cos-button-secondary" [disabled]= "!loginForm.valid">{{'login' | translate}}</button>
+          <button aria-label="press to login" mat-flat-button class="cos-button-secondary" [disabled]= "!loginForm.valid">{{'login' | translate}}</button>
         </div>
 
     </form>
