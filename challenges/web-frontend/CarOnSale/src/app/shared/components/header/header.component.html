@@ -5,6 +5,9 @@
     <div *ngIf="!isUserLoggedIn" class="cos-header__item cos-header__action-login">
         <button aria-label="login" mat-button class="cos-button-primary cos-header__item__login-button" [routerLink] = "['/login']">{{'login' | translate}}</button>
     </div>
+    <div *ngIf = "isUserLoggedIn && displayAuctionsButton" class="cos-header__action-login">
+        <button aria-label="auctions" mat-button class="cos-button-primary cos-header__item__login-button" [routerLink] = "['/overview']">{{'auctions' | translate}}</button>
+    </div>
     <div *ngIf = "isUserLoggedIn" class="cos-header__action-login">
         <button aria-label="logout" mat-button class="cos-button-primary cos-header__item__login-button" (click)="onLogout()">{{'logout' | translate}}</button>
     </div>

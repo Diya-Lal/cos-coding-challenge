@@ -12,7 +12,7 @@
     "emailPlaceholder" : "Enter Email",
     "passwordPlaceholder": "Enter Password",
     "welcome" : "Welcome ",
-    "currentAuctions": "Current Auction",
+    "currentAuctions": "Current Auctions",
     "make": "Make: ",
     "model": " / Model: ",
     "higestBidder": "Highest Bidder",
@@ -24,5 +24,6 @@
     "remainingTime": "Remaining Time: ",
     "knowMore": "Know More",
     "km": " Km",
-    "euros": " Euros"
+    "euros": " Euros",
+    "auctions": "Auctions"
 }

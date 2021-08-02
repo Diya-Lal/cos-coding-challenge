@@ -17,6 +17,14 @@ export class HeaderComponent implements OnInit {
     }
   }
 
+  public get displayAuctionsButton() {
+    if(this.router.url === '/overview')  {
+      return false
+    } else {
+      return true;
+    }
+  }
+
   constructor(private authService: AuthenticationService, private router: Router) { }
 
   ngOnInit(): void {
