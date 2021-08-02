@@ -8,8 +8,8 @@ import { MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 })
 export class ErrorDialogComponent implements OnInit {
 
-  public title: any;
-  public message: any;
+  public title: string = '';
+  public message: string = '';
 
   constructor(public dialogRef: MatDialogRef<ErrorDialogComponent>, @Inject(MAT_DIALOG_DATA) public data: any, ) { }
 
@@ -19,7 +19,7 @@ export class ErrorDialogComponent implements OnInit {
   }
 
   onClose() {
-    this.dialogRef.close()
+    this.dialogRef.close();
   }
 
 }

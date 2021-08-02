@@ -6,6 +6,7 @@ import Components from './component';
 import { RouterModule} from '@angular/router';
 import { MaterialModule } from '../material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 const imports = [
@@ -13,7 +14,8 @@ const imports = [
     RouterModule,
     MaterialModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    TranslateModule
 ]
 
 

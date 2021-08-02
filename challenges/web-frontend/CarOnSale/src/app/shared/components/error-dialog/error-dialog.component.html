@@ -4,7 +4,7 @@
         <h2>{{title}}</h2>
         </div>
         <div class="cos-error-dialog__header__close-icon">
-            <mat-icon arial-label="close" class="close" mat-dialog-close (click)="onClose()">close</mat-icon>
+            <mat-icon arial-label="close" class="close" mat-dialog-close (click)="onClose()">{{'close' | translate}}</mat-icon>
         </div>
     </div>
     <hr class="horizontal-line">
@@ -12,6 +12,6 @@
         <p>{{message}}</p>
     </div>
     <div class="cos-error-dialog__footer">
-        <button arial-label="press ok to close"  mat-flat-button class="cos-button-secondary" (click)="onClose()">Ok</button>
+        <button aria-label="press ok to close"  mat-flat-button class="cos-button-secondary" (click)="onClose()">{{'ok' | translate}}</button>
     </div>
 </div>

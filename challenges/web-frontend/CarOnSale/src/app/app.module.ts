@@ -16,6 +16,13 @@ import { HttpClientModule, HttpClient, HTTP_INTERCEPTORS } from '@angular/common
 import { AuthTokenInterceptorService } from './core/services/auth-token-interceptor.service';
 import { HomeComponent } from './home/home.component';
 
+import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http, 'assets/i18n/');
+}
+
 
 @NgModule({
   declarations: [
@@ -32,6 +39,13 @@ import { HomeComponent } from './home/home.component';
     SharedModule,
     RouterModule,
     HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+          provide: TranslateLoader,
+          useFactory: HttpLoaderFactory,
+          deps: [HttpClient]
+      }
+  })
   ],
 
   providers: [ {

@@ -27,11 +27,11 @@ export class LoginComponent implements OnInit {
     this.loginService.login(this.loginForm.value.email,this.loginForm.value.password).subscribe(
       (LoginSuccessResponse: IRegisteredUser) => {
         sessionStorage.setItem('authToken', LoginSuccessResponse.token);
-        sessionStorage.setItem('userId', LoginSuccessResponse.userId)
+        sessionStorage.setItem('userId', LoginSuccessResponse.userId);
         this.router.navigate(['/overview']);
       },
       (LoginErrorResponse) => {
-        this.commonService.openDialog({title: 'Sorry!', message: LoginErrorResponse.message})
+        this.commonService.openDialog({title: 'Sorry!', message: LoginErrorResponse.message});
       }
     )
   }

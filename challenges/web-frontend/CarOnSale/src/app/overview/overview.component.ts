@@ -20,9 +20,9 @@ export class OverviewComponent implements OnInit, OnDestroy {
 
   public get userId() {
     if(this.authService.getUserId()){
-      return this.authService.getUserId()
+      return this.authService.getUserId();
     } else {
-      return ''
+      return '';
     }
   }
 
@@ -36,7 +36,7 @@ export class OverviewComponent implements OnInit, OnDestroy {
     )
     .subscribe(
       (data:any) => {
-      this.auctions = data.items;
+        this.auctions = data.items;
     },
       (error) => {
         this.commonService.openDialog({title: 'Sorry!', message: error.message});
