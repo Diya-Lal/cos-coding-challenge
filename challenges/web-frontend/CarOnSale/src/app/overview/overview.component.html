@@ -2,41 +2,41 @@
     <div class="cos-auctions__user-title">
         {{'Welcome'}} {{' '}}{{userId}}
     </div>
-    <div class="cos-auctions__title">Current Auctions</div>
+    <div class="cos-auctions__title" aria-label="Current Autions">Current Auctions</div>
     <div class="cos-auctions__body">
-        <mat-card class="cos-auctions__body__auctions-card" *ngFor="let auctionItem of auctions">
+        <mat-card class="cos-auctions__body__auctions-card" *ngFor="let auctionItem of auctions; trackBy:trackByFunction">
             <mat-card-header>
               <!-- <div mat-card-avatar [ngStyle]="{'background-image': 'url({{getImageUrl(auctionItem)}})'; 'background-size':'50px'}"></div> -->
-               <mat-card-title>{{auctionItem['label']}}</mat-card-title>
-              <mat-card-subtitle>{{'Make: '}}{{auctionItem['associatedVehicle']['make']}}{{' / Model: '}}{{auctionItem['associatedVehicle']['model']}}</mat-card-subtitle>
+               <mat-card-title aria-label="vehicle name">{{auctionItem['label']}}</mat-card-title>
+              <mat-card-subtitle aria-label="vehicle details like make and model">{{'Make: '}}{{auctionItem['associatedVehicle']['make']}}{{' / Model: '}}{{auctionItem['associatedVehicle']['model']}}</mat-card-subtitle>
             </mat-card-header>
            <img mat-card-image src="{{getImageUrl(auctionItem)}}" alt="{{auctionItem['label']}}" width="432" height="324">
             <mat-card-content>
-                <div class="cos-auctions__body__highest-bidder" *ngIf="auctionItem['amIHighestBidder']">
+                <div aria-label= "I am the highest bidder" class="cos-auctions__body__highest-bidder" *ngIf="auctionItem['amIHighestBidder']">
                     {{'Highest Bidder'}}
                 </div>
                 <div class="cos-auctions__body__auctions-card__details">
-                    <div class="cos-auctions__body__container">
+                    <div class="cos-auctions__body__container"  aria-label="first registration">
                       <div class="cos-auctions__body__item">{{'First Registration: '}}</div>
                       <div class="cos-auctions__body__item">{{auctionItem['associatedVehicle']['ez']}}</div>
 
                     </div>
-                    <div class="cos-auctions__body__container">
+                    <div class="cos-auctions__body__container"  aria-label="mileage in km">
                       <div class="cos-auctions__body__item"> {{'Milage (in KM) : '}}</div>
                       <div class="cos-auctions__body__item">{{auctionItem['associatedVehicle']['mileageInKm']}}</div>
 
                     </div>
-                    <div class="cos-auctions__body__container">
+                    <div class="cos-auctions__body__container"  aria-label="current highest bid value">
                         <div class="cos-auctions__body__item"> {{'Current Highest Bid Value: '}}</div>
                         <div class="cos-auctions__body__item">{{auctionItem['currentHighestBidValue']}}</div>
   
                       </div>
 
-                  <div class="cos-auctions__body__time"> {{'Remaining Time: '}}   {{ getRemainingTime(auctionItem['remainingTimeInSeconds'])}}</div>
+                  <div class="cos-auctions__body__time" aria-label="remaining time"> {{'Remaining Time: '}}   {{ getRemainingTime(auctionItem['remainingTimeInSeconds'])}}</div>
                 </div>
             </mat-card-content>
             <mat-card-actions class="cos-auctions__body__auction-card-actions">
-              <button mat-button class="cos-button-secondary">Know More</button>
+              <button mat-button class="cos-button-secondary" aria-label="know more about the vehicle">Know More</button>
             </mat-card-actions>
         </mat-card>
 

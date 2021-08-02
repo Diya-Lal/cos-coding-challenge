@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Endpoints } from 'src/app/config/configs';
 
 @Injectable({
@@ -7,10 +8,11 @@ import { Endpoints } from 'src/app/config/configs';
 })
 export class AutionService {
 
-  baseUrl = Endpoints.BASE_URL;
+  baseUrl: string = Endpoints.BASE_URL;
+
   constructor(private http: HttpClient) { }
 
-  public getAuctions() {
+  public getAuctions(): Observable<any> {
     const autionsEndPoint = Endpoints.AUCTION_BUYER_ENDPOINT;
     const url = `${this.baseUrl}/${autionsEndPoint}`;
     let params = new HttpParams();

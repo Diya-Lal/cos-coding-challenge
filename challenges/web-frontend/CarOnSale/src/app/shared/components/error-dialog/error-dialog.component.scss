@@ -1,5 +1,7 @@
+@import '../../../../custom-styles/custom-styles.scss';
+
 .cos-error-dialog{
-    border: 7px solid #FFD454;
+    border: 7px solid $cos-yellow;
     padding: 22px;
     &__header{
         display: flex;
@@ -24,7 +26,7 @@
 }
 
 .horizontal-line {
-    border: 3px solid #FFD454;
+    border: 3px solid $cos-yellow;
     margin-left: -28px;
     margin-right: -28px;
     margin-bottom: 30px;

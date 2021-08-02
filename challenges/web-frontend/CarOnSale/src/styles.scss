@@ -35,6 +35,8 @@ $CarOnSale-theme: mat.define-light-theme((
 
 /* You can add global styles to this file, and also import other style files */
 
+@import './custom-styles/custom-styles.scss';
+
 .cos-button-primary {
   background-color: black !important;
   color: white;
@@ -42,7 +44,7 @@ $CarOnSale-theme: mat.define-light-theme((
 }
 
 .cos-button-secondary {
-  background-color: #ffd452 !important;
+  background-color: $cos-yellow !important;
   color: black;
   font-weight: bold;
   cursor:pointer;
@@ -59,11 +61,11 @@ $CarOnSale-theme: mat.define-light-theme((
 }
 
 .mat-form-field-appearance-outline .mat-form-field-outline-thick {
-  color: #ffd452 !important;
+  color: $cos-yellow !important;
 }
 
  .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
-  color: #ffd452 !important;
+  color: $cos-yellow !important;
 }
 
 .mat-form-field.mat-focused .mat-form-field-label {

@@ -1,3 +1,5 @@
+@import '../../custom-styles/custom-styles.scss';
+
 .cos-auctions{
     padding: 35px 20px;
     font-size: 20px;
@@ -5,15 +7,15 @@
         font-weight: bold;
         font-family: serif;
         font-size: 30px;
-        color: #474b57;
+        color: $cos-light-black;
         text-decoration: underline;
-        text-decoration-color: #ffd452;
+        text-decoration-color: $cos-yellow;
     }
     &__title {
         font-weight: bold;
         font-family: serif;
-        font-size: 30px;
-        color: #474b57;
+        font-size: 28px;
+        color: $cos-light-black;
         padding: 30px 0px;
         text-align: center;
         text-decoration: underline;
@@ -27,7 +29,6 @@
             max-width: 400px;
             margin: 20px 20px;
             &__details{
-                font-family: serif;
                 font-size: 16px;
             }
         }
@@ -46,21 +47,24 @@
         }
         &__time{
             padding: 20px 85px;
-            background: #78b2d6;
+            background: $cos-light-blue;
             border-radius: 45px;
             font-weight: bold;
         }
         &__highest-bidder{
             color: white;
             border: 2px solid black;
-            // float: right;
-            background-image: radial-gradient(circle, #ffd452, black);
+            background-image: radial-gradient(circle, $cos-yellow, black);
             border-radius: 35%;
             text-align: center;
             padding: 4px;
             position: absolute;
             left: 68%;
         }
+    }
+
+    .mat-card {
+        font-family: serif;
     }
 
 }

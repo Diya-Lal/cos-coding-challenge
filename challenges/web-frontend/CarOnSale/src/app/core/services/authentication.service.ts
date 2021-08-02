@@ -13,11 +13,9 @@ export class AuthenticationService {
     } else {
       return false;
     }
-    //return this.isLoggedIn;
   }
  
   public logout() {
-    //this.isLoggedIn = false;
     sessionStorage.removeItem('authToken');
     sessionStorage.removeItem('userId');
   }

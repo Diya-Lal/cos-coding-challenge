@@ -1,12 +1,16 @@
+@import '../../custom-styles/custom-styles.scss';
+
 .cos-autions-home-page{
     text-align: center;
     margin-top: 15%;
     p{
         color: black;
         text-decoration: underline;
-        text-decoration-color: #ffd452;
+        text-decoration-color: $cos-yellow;
         font-weight: bold;
         font-size: 35px;
         text-decoration-thickness: 5px;
+        padding: 0 4%;
+        line-height: 1.5;
     }
 }

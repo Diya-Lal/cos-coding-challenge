@@ -1,5 +1,7 @@
+@import '../../../../custom-styles/custom-styles.scss';
+
 .cos-header {
-    background: #ffd452;
+    background: $cos-yellow;
     display: flex;
 
     &__item {

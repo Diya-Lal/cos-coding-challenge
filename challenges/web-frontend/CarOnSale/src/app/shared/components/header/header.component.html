@@ -3,12 +3,9 @@
         <img [routerLink]="['/home']" src = "https://global-uploads.webflow.com/5e38202569b4c2b7f3f33aa1/5e38343084bb96cdce49b5fe_logo.svg">
     </div>
     <div *ngIf="!isUserLoggedIn" class="cos-header__item cos-header__action-login">
-        <button mat-button class="cos-button-primary cos-header__item__login-button" [routerLink] = "['/login']">Login</button>
-    </div>
-    <div class="cos-header__action-login">
-        <button mat-button class="cos-button-primary cos-header__item__login-button" [routerLink] = "['/overview']">Auctions</button>
+        <button aria-label="login" mat-button class="cos-button-primary cos-header__item__login-button" [routerLink] = "['/login']">Login</button>
     </div>
     <div *ngIf = "isUserLoggedIn" class="cos-header__action-login">
-        <button mat-button class="cos-button-primary cos-header__item__login-button" (click)="onLogout()">Logout</button>
+        <button aria-label="logout" mat-button class="cos-button-primary cos-header__item__login-button" (click)="onLogout()">Logout</button>
     </div>
 </div>
