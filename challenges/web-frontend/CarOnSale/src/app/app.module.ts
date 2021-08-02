@@ -14,6 +14,7 @@ import { LoginService } from './core/services/login.service';
 
 import { HttpClientModule, HttpClient, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthTokenInterceptorService } from './core/services/auth-token-interceptor.service';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { AuthTokenInterceptorService } from './core/services/auth-token-intercep
     AppComponent,
     LoginComponent,
     OverviewComponent,
+    HomeComponent,
     
   ],
   imports: [
